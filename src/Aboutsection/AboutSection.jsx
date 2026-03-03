@@ -1,5 +1,4 @@
-import React from "react";
-import { Globe, Mic2, IdCard } from "lucide-react";
+import { Globe, IdCard, Mic2 } from "lucide-react";
 import "./AboutSection.css";
 
 function AboutExpo() {
@@ -24,7 +23,7 @@ function AboutExpo() {
               World AI Technology Expo <span className="text-primary">UAE 2025</span>
             </h1>
             <p className="text-muted mb-4">
-              The World AI Expo Dubai 2025 stands as the largest and most comprehensive AI Show & AI Conference globally...
+              The World AI Expo Dubai 2025 stands as the largest and most comprehensive AI Show & AI Conference globally....
             </p>
             <p className="text-muted mb-4">
               Connect directly with AI leaders from over 20 countries and catapult your career to the next level. 

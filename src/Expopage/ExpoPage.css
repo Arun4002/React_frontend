@@ -1,0 +1,407 @@
+/* --- BASE RESET --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; overflow-x: hidden; }
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* --- HERO STYLES --- */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+}
+
+/* The Slanted Blue Background */
+.hero-bg-slant {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 48%;
+  height: 100%;
+  background-color: #f1f6ff;
+  z-index: 1;
+  clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.hero-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  width: 90%;
+  max-width: 1200px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.top-label { color: #2563eb; font-weight: 600; text-transform: uppercase; margin-bottom: 8px; }
+.secondary-title { font-size: 2.2rem; color: #1a1a1a; margin: 0; }
+.primary-title { 
+  font-size: 3.8rem; 
+  color: #2563eb; 
+  font-weight: 800; 
+  margin: 10px 0 30px; 
+  white-space: nowrap; 
+}
+
+.magazine-btn {
+  background: #2563eb;
+  color: white;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 4px;
+  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* --- FOOTER STYLES --- */
+.footer {
+  background-color: #000000;
+  color: #b0b0b0;
+  padding: 80px 5% 40px;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.5fr 0.8fr 1fr 1.2fr;
+  gap: 40px;
+  max-width: 5%;
+  margin: 8 auto 60px;
+}
+
+.footer-col h3 { color: #fff; margin-bottom: 25px; font-size: 1.2rem; }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 12px; cursor: pointer; transition: 0.2s; }
+.footer-col li:hover { color: #fff; }
+
+.footer-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
+.logo-text { display: flex; flex-direction: column; line-height: 1.1; color: #fff; }
+
+.social-tray { display: flex; gap: 15px; margin-top: 25px; }
+.social-tray a { 
+  color: #fff; border: 1px solid #333; width: 36px; height: 36px; 
+  display: flex; align-items: center; justify-content: center; border-radius: 50%;
+}
+
+.contact-item { display: flex; gap: 15px; margin-bottom: 20px; line-height: 1.5; }
+.contact-item svg { color: #fff; font-size: 1.2rem; flex-shrink: 0; margin-top: 4px; }
+
+.footer-bottom { border-top: 1px solid #222; padding-top: 40px; max-width: 1200px; margin: 0 auto; }
+.disclaimer { font-size: 0.8rem; margin-bottom: 30px; line-height: 1.6; color: #888; }
+.disclaimer strong { display: block; margin-bottom: 10px; color: #ccc; }
+
+.copyright { text-align: center; font-size: 0.85rem; color: #666; }
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+  .hero-container { flex-direction: column; text-align: center; }
+  .primary-title { font-size: 2.8rem; white-space: normal; }
+  .hero-bg-slant { display: none; }
+  .footer-top { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 600px) {
+  .footer-top { grid-template-columns: 1fr; }
+}
+/* --- RESPONSIVE RULES --- */
+
+/* For Tablets and smaller laptops (e.g., iPads) */
+@media (max-width: 1024px) {
+  .content-wrapper {
+    gap: 50px; /* Reduces the large gap between text and image */
+  }
+  
+  .title-primary {
+    font-size: 2.8rem; /* Shrinks the big title slightly */
+  }
+}
+
+/* For Mobile Phones (e.g., iPhones, Androids) */
+@media (max-width: 768px) {
+  /* 1. Stack the Hero section vertically */
+  .content-wrapper {
+    grid-template-columns: 1fr; /* Changes from 2 columns to 1 */
+    text-align: center;
+    gap: 30px;
+    padding-top: 40px;
+  }
+
+  /* 2. Hide the slanted blue shape on mobile for a cleaner look */
+  .bg-shape {
+    display: none;
+  }
+
+  /* 3. Center the image and button */
+  .card-container {
+    justify-content: center;
+  }
+
+  .title-primary {
+    font-size: 2.2rem;
+    white-space: normal; /* Allows text to wrap on small screens */
+  }
+
+  /* 4. Stack the Footer columns */
+  .footer-top {
+    grid-template-columns: 1fr; /* One column for all footer sections */
+    text-align: center;
+    gap: 30px;
+  }
+
+  .social-icons, .logo-wrapper {
+    justify-content: center; /* Centers the logo and icons */
+  }
+
+  .contact-info p {
+    justify-content: center;
+  }
+}/* --- RESPONSIVE MOBILE OVERRIDES --- */
+
+/* --- BASE RESET --- */
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
+body { 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  overflow-x: hidden; 
+  background-color: #ffffff;
+}
+
+/* --- HERO STYLES --- */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  padding: 40px 0;
+}
+
+/* Slanted Background Shape */
+.hero-bg-slant, .bg-shape, .hero-bg-accent {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 48%;
+  height: 100%;
+  background-color: #f1f6ff;
+  z-index: 1;
+  clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.hero-container, .content-wrapper {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  width: 90%;
+  max-width: 1200px;
+  align-items: center;
+  gap: 60px;
+  margin: 0 auto;
+}
+
+.top-label { 
+  color: #2563eb; 
+  font-weight: 600; 
+  text-transform: uppercase; 
+  font-size: 0.9rem;
+  margin-bottom: 8px; 
+}
+
+.secondary-title, .hero-brand { 
+  font-size: 2rem; 
+  color: #1a1a1a; 
+  margin: 0; 
+}
+
+.primary-title, .hero-main-title { 
+  font-size: 3.8rem; 
+  color: #2563eb; 
+  font-weight: 800; 
+  margin: 10px 0 30px; 
+}
+
+.magazine-btn {
+  background: #2563eb;
+  color: white;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.magazine-btn:hover {
+  background: #1d4ed8;
+}
+
+.hero-image img, .magazine-image-large, .magazine-cover {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 4px;
+  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.25);
+  display: block;
+}
+
+/* --- FOOTER STYLES --- */
+.footer {
+  background-color: #000000;
+  color: #b0b0b0;
+  padding: 80px 5% 40px;
+}
+
+.footer-top, .footer-top-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 0.8fr 1fr 1.2fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto 60px;
+}
+
+.footer-col h3 { 
+  color: #fff; 
+  margin-bottom: 25px; 
+  font-size: 1.2rem; 
+}
+
+.footer-col ul { 
+  list-style: none; 
+}
+
+.footer-col li { 
+  margin-bottom: 12px; 
+  cursor: pointer; 
+  font-size: 0.9rem;
+  transition: 0.2s; 
+}
+
+.footer-col li:hover { 
+  color: #fff; 
+}
+
+.footer-logo-area, .logo-wrapper { 
+  display: flex; 
+  align-items: center; 
+  gap: 10px; 
+  margin-bottom: 20px; 
+}
+
+.logo-text { 
+  display: flex; 
+  flex-direction: column; 
+  line-height: 1.1; 
+  color: #fff; 
+}
+
+.social-tray, .social-icons, .footer-socials { 
+  display: flex; 
+  gap: 15px; 
+  margin-top: 25px; 
+}
+
+.social-tray a, .social-icons a { 
+  color: #fff; 
+  border: 1px solid #333; 
+  width: 36px; 
+  height: 36px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+.contact-item, .contact-info p { 
+  display: flex; 
+  gap: 15px; 
+  margin-bottom: 20px; 
+  line-height: 1.5; 
+  font-size: 0.9rem;
+}
+
+.footer-bottom { 
+  border-top: 1px solid #222; 
+  padding-top: 40px; 
+  max-width: 1200px; 
+  margin: 0 auto; 
+}
+
+.disclaimer { 
+  font-size: 0.75rem; 
+  margin-bottom: 30px; 
+  line-height: 1.6; 
+  color: #888; 
+  text-align: justify;
+}
+
+.copyright { 
+  text-align: center; 
+  font-size: 0.85rem; 
+  color: #666; 
+}
+
+/* --- RESPONSIVE RULES --- */
+
+/* For Tablets */
+@media (max-width: 1024px) {
+  .hero-container, .content-wrapper { 
+    grid-template-columns: 1fr;
+    text-align: center; 
+  }
+  
+  .primary-title, .hero-main-title { 
+    font-size: 2.8rem; 
+  }
+  
+  .hero-bg-slant, .bg-shape, .hero-bg-accent { 
+    display: none; 
+  }
+  
+  .footer-top, .footer-top-grid { 
+    grid-template-columns: 1fr 1fr; 
+  }
+}
+
+/* For Mobile Phones */
+@media (max-width: 768px) {
+  .hero-container, .content-wrapper, .footer-top, .footer-top-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .magazine-image-large, .magazine-cover, .hero-image img {
+    width: 250px; 
+    margin: 0 auto;
+  }
+
+  .primary-title, .hero-main-title {
+    font-size: 2.2rem;
+  }
+
+  .footer-socials, .social-icons, .footer-logo-area, .logo-wrapper, .contact-info p, .social-tray {
+    justify-content: center;
+  }
+
+  .footer-top, .footer-top-grid {
+    grid-template-columns: 1fr;
+  }
+}

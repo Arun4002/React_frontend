@@ -1,0 +1,112 @@
+/* Container & Header */
+.page-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  font-family: sans-serif;
+  color: black;
+}
+
+.header {
+  margin-bottom: 40px;
+}
+
+.subtitle {
+  color: #3b82f6;
+  font-size: 14px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 800;
+  color: #111;
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns on desktop */
+  gap: 30px;
+}
+
+/* Card Styling */
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.name-tag {
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  background: #111;
+  color: #fff;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.content {
+  margin-top: 15px;
+}
+
+.company {
+  color: #2563eb; /* Blue color from image */
+  font-size: 15px;
+  margin: 0 0 4px 0;
+  font-weight: 700;
+}
+
+.role {
+  color: #666;
+  font-size: 13px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Footer & Button */
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.btn {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 1024px) {
+  .grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .grid { grid-template-columns: 1fr; }
+}

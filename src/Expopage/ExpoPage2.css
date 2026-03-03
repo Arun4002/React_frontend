@@ -1,0 +1,158 @@
+/* GLOBAL STYLES */
+.main-page {
+  font-family: 'Inter', sans-serif;
+  color: #333;
+}
+
+/* HERO LAYOUT */
+.hero-container {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #fff;
+}
+
+.bg-swoosh {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 48%;
+  height: 100%;
+  background: #f1f6ff;
+  z-index: 1;
+  clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  max-width: 1200px;
+  width: 90%;
+  gap: 40px;
+}
+
+/* TYPOGRAPHY & BUTTONS */
+.sub-header {
+  color: #2563eb;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.title-secondary {
+  font-size: 2rem;
+  margin: 0;
+  color: #111;
+}
+
+.title-primary {
+  font-size: 4rem;
+  color: #2563eb;
+  font-weight: 800;
+  margin: 10px 0 30px 0;
+  white-space: nowrap;
+}
+
+.view-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* MAGAZINE IMAGE */
+.hero-image {
+  display: flex;
+  justify-content: center;
+}
+
+.magazine-cover {
+  width: 380px;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* FOOTER STYLING */
+.footer {
+  background: #000;
+  color: #ccc;
+  padding: 80px 5% 40px;
+  font-size: 0.9rem;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer h3 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer li {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.footer-brand .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.footer-brand .logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-links a {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 60px auto 0;
+  text-align: left;
+  font-size: 0.75rem;
+  color: #666;
+}
+
+.footer-bottom hr {
+  border: 0;
+  border-top: 1px solid #333;
+  margin: 20px 0;
+}
+
+.copyright {
+  text-align: center;
+  color: #999;
+}

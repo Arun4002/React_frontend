@@ -1,0 +1,94 @@
+.involved-section {
+  position: relative;
+  padding: 100px 60px;
+  background: url("https://images.unsplash.com/photo-1540575467063-178a50c2df87")
+    center/cover no-repeat;
+  color: rgb(244, 244, 244);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.involved-container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.small-title {
+  color: #facc15;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.involved-container h2 {
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+
+/* Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 220px;
+  gap: 20px;
+}
+
+/* First two bigger items */
+.grid-item:nth-child(1),
+.grid-item:nth-child(2) {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.grid-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px;
+  display: block;
+}
+
+/* Text Overlay */
+.item-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  text-align: left;
+}
+
+.item-overlay p {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Hover Effect */
+.grid-item:hover img {
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 200px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}

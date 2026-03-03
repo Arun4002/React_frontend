@@ -1,0 +1,55 @@
+/* Top spacing wrapper */
+.nav-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  width: 100%;
+}
+
+/* Glass Navbar */
+.custom-nav-container {
+  max-width: 1400px;
+  width:100%;
+  min-height: 70px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0 20px;
+  background: rgba(20, 30, 60, 0.6);
+  backdrop-filter: blur(12px);
+  position: absolute;
+  z-index: 1000;
+}
+
+/* Brand small text */
+.brand-subtext {
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: #cbd5e0;
+}
+
+/* Nav links */
+.nav-link {
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-size: 0.95rem;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: #ffffff !important;
+}
+
+/* Button */
+.book-ticket-btn {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 8px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.book-ticket-btn:hover {
+  background-color: #2563eb;
+}

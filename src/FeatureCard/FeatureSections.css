@@ -1,0 +1,43 @@
+/* Container for the emoji */
+.fs-emoji-box {
+  font-size: 1.5rem; /* Makes emojis large and clear */
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
+  
+  
+  color: initial; 
+}
+
+.fs-benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.fs-benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); /* Professional card look */
+}
+
+.fs-benefit-label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #334155;
+}
+
+
+.fs-section {
+  padding: 60px 5%;
+  background-color: #fcfdff;
+}

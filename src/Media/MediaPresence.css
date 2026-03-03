@@ -1,0 +1,90 @@
+/* SECTION */
+.media-section {
+  background: #759ad5;          
+  padding: 120px 5%;
+  display: flex;
+  justify-content: center;
+}
+  .media-section {
+  background: #b9cfea; /* same as your page */
+
+}
+
+.media-container {
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+  justify-content: center;
+  
+}
+
+/* TITLE */
+.media-subtitle {
+  color: #4f6df5;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.media-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  color: #111;
+}
+
+
+.logo-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
+}
+
+
+
+
+.logo-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  transition: 0.3s ease;
+}
+
+/* Logo image styling */
+.logo-card img {
+  max-width: 140px;
+  max-height: 60px;
+  object-fit: contain;
+}
+
+/* Hover Effect */
+.logo-card:hover {
+  transform: translateY(-5px);
+  color: #B9C2DA;
+
+}
+
+@media (max-width: 1024px) {
+  .logo-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+
+@media (max-width: 600px) {
+  .logo-grid {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .logo-grid {
+    grid-template-columns: 1fr; 
+  }
+}

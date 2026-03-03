@@ -1,0 +1,132 @@
+/* 1. Main Container: Splitting the screen in two */
+.pitch-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 80px 10%;
+  background-color: #fcfdff; /* Very light blue/white tint */
+  font-family: 'Inter', sans-serif; /* Modern clean font */
+  .pitch-container {
+  padding: 100px 10% 20px 10%; /* Top: 80px, Sides: 10%, Bottom: 20px */
+}
+  
+}
+
+/* 2. Left Side: Text Content */
+.pitch-content {
+  flex: 1.2; /* Takes up slightly more space than the images */
+  color: #31e71d  ;
+  font: inherit;
+
+  
+}
+
+.pitch-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #00020b;
+  margin-bottom: 20px;
+}
+
+.pitch-title span {
+  color: #2563eb; /* The vibrant blue for "Pitching" */
+}
+
+.pitch-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #64748b; /* Grayish text for better readability */
+  margin-bottom: 40px;
+  max-width: 600px;
+}
+
+/* 3. The Grid: Creating 2 columns of benefit cards */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+
+
+.benefit-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+  transition: transform 0.2s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-3px); /* Lifts slightly when you hover */
+}
+
+.benefit-card p {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #1e293b;
+  margin: 0;
+}
+
+/* 4. Buttons */
+.button-group {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.btn-primary {
+  background-color: #2563eb;
+  color: white;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+}
+
+.btn-text {
+  background: none;
+  border: none;
+  color: #2563eb;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* 5. Right Side: Images */
+.pitch-images {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.pitch-images img {
+  width: 100%;
+  border-radius: 24px;
+  object-fit: cover;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive: Stack them on top of each other on mobile */
+@media (max-width: 968px) {
+  .pitch-container {
+    flex-direction: column;
+    padding: 40px 5%;
+  }
+  
+  .benefits-grid {
+    grid-template-columns: 1fr; /* Single column on small screens */
+  } 
+}

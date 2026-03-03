@@ -1,0 +1,85 @@
+/* --- SECTION WRAPPER --- */
+.expo-section {
+  position: relative;
+  background-color: #ffffff;
+  overflow: hidden; /* Keeps the tilted grid inside the section */
+}
+
+/* --- THE PERSPECTIVE GRID (Exactly as in image) --- */
+.grid-overlay {
+  position: absolute;
+  top: -20%; /* Extend to cover tilt gaps */
+  left: -10%;
+  width: 120%;
+  height: 140%;
+  background-image: 
+    linear-gradient(rgba(59, 102, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 102, 255, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  /* Perspective creates the 3D "floor" look */
+  transform: perspective(1000px) rotateX(45deg); 
+  transform-origin: center;
+  z-index: 1;
+  opacity: 0.6;
+}
+
+/* --- ROCKET ICON --- */
+.rocket-icon {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  z-index: 2;
+  transform: rotate(-10deg);
+}
+
+/* --- IMAGE GALLERY SIZING (Exact 583px) --- */
+.image-grid-container {
+  width: 583px; /* Exact spec from your layout image */
+  max-width: 100%; /* Responsive safety */
+}
+
+/* About1.png styling */
+.custom-img-large {
+  width: 583px;
+  height: 357.98px; /* Exact height per image_9ccce4 */
+  border-radius: 16px; /* Exact radius per image_9ccce4 */
+  border: 1px solid rgba(0,0,0,0.05); /* 1px border per image_9ccce4 */
+  object-fit: cover;
+  display: block;
+}
+
+/* About2.png & About3.png styling */
+.custom-img-small {
+  width: calc(50% - 12px); /* Splits the 583px minus the gap */
+  height: 380px; /* Taller speaker profile style */
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,0.05);
+  object-fit: cover;
+}
+
+/* --- BLUE DOTTED CONNECTOR --- */
+.blue-connector {
+  position: absolute;
+  top: 50%;
+  left: -80px; /* Positioning it behind the text area */
+  width: 120px;
+  border-top: 2px dotted #3b66ff;
+  z-index: -1;
+}
+
+/* --- STAT CARDS --- */
+.stat-card {
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.blue-bg { background-color: #f0f4ff; border-color: #dbeafe !important; }
+.purple-bg { background-color: #f8f0ff; border-color: #f3e8ff !important; }
+.green-bg { background-color: #f0fff4; border-color: #dcfce7 !important; }
+
+/* Icon Colors */
+.text-purple { color: #a855f7; }
+.text-green { color: #22c55e; }
